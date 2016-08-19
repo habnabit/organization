@@ -62,6 +62,11 @@
 * box configuration [0/4]
 ** TODO ifstated for comcast DHCP
 ** TODO move everything to freebsd
+** TODO stop hand-rolling my own CA
+  - [ ] see if ~vault~ is actually usable for this
+    - [ ] how can I back up a vault
+  - [ ] move over openvpn
+  - [ ] move over postfix
 ** TODO use ~zangoose~ and ~txacme~ for TLS termination
 *** TODO txacme [0/2]
   - [ ] figure out what I even want
@@ -69,7 +74,7 @@
     - [ ] submit patch
     - [ ] does this still require patching ~hypothesis~
 ** TODO dotfiles [0/2]
-  - [ ] unbreak ~zsh-highlighting~
+*** TODO unbreak ~zsh-highlighting~
 *** TODO rust-lang/rust [0/1]
   - [ ] PR for ~librand~ under freebsd
     - [ ] submit patch
