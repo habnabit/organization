@@ -1,0 +1,78 @@
+#+TITLE: Personal projects
+
+* ~passacre~ [0/7]
+** TODO ~irmin~ backing database/run in a browser [0/3]
+*** TODO ~serde_proto~ [0/1]
+  - [ ] figure out releasing
+  - [ ] keep moving more things to quasiquote macros
+  - [ ] conformance testing
+  - [ ] figure out if compilation can take less time
+  - [ ] release it
+**** TODO ~aster~ [0/1]
+  - [ ] separate out patches
+    - [ ] patch approval..........
+*** TODO ~emscripten~ support [0/2]
+**** TODO ~tokio-xhr~ [0/2]
+  - [ ] IARC
+  - [ ] tests??? (how)
+**** TODO ~hyper~ [0/1]
+  - [ ] split hyper into multiple crates
+    - that is, if they approve
+*** TODO figure out if you can easily read/write to github from mobile
+** TODO ~ramp~ [0/1]
+  - [ ] use ~num_traits~
+    - [ ] submit patch
+** TODO fully port to rust
+** TODO stabilize ~scrypt~
+** TODO deprecate/remove yubikey
+** TODO improve rolling settings forward-backward
+  - you need to change passwords sometimes
+  - add profiles per domain?
+** TODO dedicated hardware
+  - https://hacks.pmf.io/2015/06/24/the-beaglebone-black-as-a-smart-kvm/
+* ~ebb-lint~ [0/3]
+  - [ ] wait for legal situation to settle down
+  - [ ] make time
+  - [ ] review issues
+* ~txsocksx~ [0/3]
+  - [ ] make time
+  - [ ] review issues
+  - [ ] python 3 support?
+    - definitely blocked on ~parsley~
+    - might be blocked on other things too
+* ~pebble.rs~ [0/2]
+  - [ ] clean it up
+  - [ ] release it? IARC?
+* FW TAS [0/1]
+** TODO qemu evaluation [0/1]
+  - [ ] clean up/submit PPC MMU patch
+    - [ ] submit patch
+* ~awpa~ [0/1]
+  - [ ] make time
+* ~vcversioner~ [0/3]
+  - [ ] make time
+  - [ ] deprecate in favor of ~versioneer~?
+    - I think they're at feature parity, but how to help people migrate
+  - [ ] review issues
+* ~parsley~ [0/2]
+  - [ ] make time
+  - [ ] python 3 bytes?
+* ~wip~ [0/1]
+  - [ ] make time
+* box configuration [0/4]
+** TODO ifstated for comcast DHCP
+** TODO move everything to freebsd
+** TODO use ~zangoose~ and ~txacme~ for TLS termination
+*** TODO txacme [0/2]
+  - [ ] figure out what I even want
+  - [ ] open/update PR
+    - [ ] submit patch
+    - [ ] does this still require patching ~hypothesis~
+** TODO dotfiles [0/2]
+  - [ ] unbreak ~zsh-highlighting~
+*** TODO rust-lang/rust [0/1]
+  - [ ] PR for ~librand~ under freebsd
+    - [ ] submit patch
+*** TODO rust-lang-nursery/rand [0/1]
+  - [ ] patch for freebsd
+    - [ ] submit patch
