@@ -2,6 +2,10 @@
 
 * ~passacre~ [0/7]
 ** TODO ~irmin~ backing database/run in a browser [0/3]
+  - https://github.com/kripken/emscripten/blob/master/src/embind/embind.js
+  - https://github.com/kripken/emscripten/blob/master/src/embind/emval.js
+  - https://github.com/mirage/irmin/wiki/REST-API
+  - http://mirage.github.io/irmin/Irmin.html#basics
 *** TODO ~serde_proto~ [0/1]
   - [ ] figure out releasing
   - [ ] keep moving more things to quasiquote macros
@@ -12,9 +16,13 @@
   - [ ] separate out patches
     - [ ] patch approval..........
 *** TODO ~emscripten~ support [0/2]
-**** TODO ~tokio-xhr~ [0/2]
+**** TODO ~tokio-xhr~ [0/3]
   - [ ] IARC
   - [ ] tests??? (how)
+  - [ ] use ~tokio~ services
+    - https://github.com/tokio-rs/tokio/blob/master/src/service.rs#L130-L146
+    - figure out how to interoperate with other http services
+    - use the split-out ~hyper~?
 **** TODO ~hyper~ [0/1]
   - [ ] split hyper into multiple crates
     - that is, if they approve
@@ -30,6 +38,8 @@
   - add profiles per domain?
 ** TODO dedicated hardware
   - https://hacks.pmf.io/2015/06/24/the-beaglebone-black-as-a-smart-kvm/
+** ~secbox~?
+  - https://github.com/ticki/secbox/blob/master/src/lib.rs
 * ~ebb-lint~ [0/3]
   - [ ] wait for legal situation to settle down
   - [ ] make time
@@ -47,8 +57,16 @@
 ** TODO qemu evaluation [0/1]
   - [ ] clean up/submit PPC MMU patch
     - [ ] submit patch
+  - http://wiki.qemu.org/PowerPC
+  - http://www.emaculation.com/forum/viewtopic.php?f=34&t=7047&start=825
+  - http://www.emaculation.com/doku.php/ppc-osx-on-qemu-for-osx
+  - https://translatedcode.wordpress.com/2015/07/06/tricks-for-debugging-qemu-savevm-snapshots/
+** macsbug
+  - http://www.smfr.org/computing/archaic/macsbug.html
 * ~awpa~ [0/1]
   - [ ] make time
+  - https://github.com/google/yapf/blob/729279/yapf/yapflib/pytree_utils.py#L70-L102
+  - https://github.com/bukzor/RefactorLib/blob/master/refactorlib/python/parse.py#L40
 * ~vcversioner~ [0/3]
   - [ ] make time
   - [ ] deprecate in favor of ~versioneer~?
@@ -61,10 +79,12 @@
   - [ ] make time
 * box configuration [0/4]
 ** TODO ifstated for comcast DHCP
+  - https://calomel.org/ifstated.html
 ** TODO move everything to freebsd
 ** TODO stop hand-rolling my own CA
   - [ ] see if ~vault~ is actually usable for this
-    - [ ] how can I back up a vault
+    - https://github.com/jhaals/ansible-vault maybe?
+    - how can I back up a vault
   - [ ] move over openvpn
   - [ ] move over postfix
 ** TODO use ~zangoose~ and ~txacme~ for TLS termination
@@ -80,4 +100,5 @@
     - [ ] submit patch
 *** TODO rust-lang-nursery/rand [0/1]
   - [ ] patch for freebsd
+    - https://github.com/rust-lang-nursery/rand/pull/112
     - [ ] submit patch
