@@ -44,6 +44,7 @@
   - [ ] wait for legal situation to settle down
   - [ ] make time
   - [ ] review issues
+  - http://flake8.pycqa.org/en/latest/user/ignoring-errors.html#in-line-ignoring-errors
 * ~txsocksx~ [0/3]
   - [ ] make time
   - [ ] review issues
