@@ -1,7 +1,8 @@
 #+TITLE: Personal projects
+#+TODO: TODO(t) INPROGRESS(i) BLOCKED(b) | DONE(d)
 
-* ~passacre~ [0/7]
-** TODO ~irmin~ backing database/run in a browser [0/3]
+* ~passacre~ [0/8]
+** TODO ~irmin~ backing database/run in a browser [0/4]
   - https://github.com/kripken/emscripten/blob/master/src/embind/embind.js
   - https://github.com/kripken/emscripten/blob/master/src/embind/emval.js
   - https://github.com/mirage/irmin/wiki/REST-API
@@ -23,12 +24,20 @@
     - https://github.com/tokio-rs/tokio/blob/master/src/service.rs#L130-L146
     - figure out how to interoperate with other http services
     - use the split-out ~hyper~?
-**** TODO ~hyper~ [0/1]
+    - waiting on ~tokio~ to split out services into its own crate
+**** BLOCKED ~hyper~ [0/1]
   - [ ] split hyper into multiple crates
     - that is, if they approve
+    - https://github.com/hyperium/hyper/issues/894
 *** TODO figure out if you can easily read/write to github from mobile
-** TODO ~ramp~ [0/1]
-  - [ ] use ~num_traits~
+*** TODO get rust stable running on ~emscripten~
+**** TODO ~rustup.rs~
+  - [ ] submit PR for installing from local tarballs
+    - [ ] tests
+    - [ ] submit patch
+** INPROGRESS ~ramp~ [0/1]
+  - [-] use ~num_traits~
+    - [X] https://github.com/Aatch/ramp/pull/75
     - [ ] submit patch
 ** TODO fully port to rust
 ** TODO stabilize ~scrypt~
@@ -38,7 +47,7 @@
   - add profiles per domain?
 ** TODO dedicated hardware
   - https://hacks.pmf.io/2015/06/24/the-beaglebone-black-as-a-smart-kvm/
-** ~secbox~?
+** TODO ~secbox~?
   - https://github.com/ticki/secbox/blob/master/src/lib.rs
 * ~ebb-lint~ [0/3]
   - [ ] wait for legal situation to settle down
@@ -81,6 +90,7 @@
 * box configuration [0/4]
 ** TODO ifstated for comcast DHCP
   - https://calomel.org/ifstated.html
+  - might not be necessary with the new modem
 ** TODO move everything to freebsd
 ** TODO stop hand-rolling my own CA
   - [ ] see if ~vault~ is actually usable for this
@@ -94,12 +104,24 @@
   - [ ] open/update PR
     - [ ] submit patch
     - [ ] does this still require patching ~hypothesis~
-** TODO dotfiles [0/2]
+** TODO dotfiles [0/5]
 *** TODO unbreak ~zsh-highlighting~
-*** TODO rust-lang/rust [0/1]
+*** BLOCKED rust-lang/rust [0/1]
   - [ ] PR for ~librand~ under freebsd
+    - [ ] https://github.com/rust-lang/rust/pull/35884
     - [ ] submit patch
-*** TODO rust-lang-nursery/rand [0/1]
+*** BLOCKED rust-lang-nursery/rand [0/1]
   - [ ] patch for freebsd
-    - https://github.com/rust-lang-nursery/rand/pull/112
+    - [ ] https://github.com/rust-lang-nursery/rand/pull/112
     - [ ] submit patch
+*** TODO ~cdpath~
+*** TODO ~e~ alias (maybe?)
+* ~panglery~
+** TODO does anyone even use this? can I kill it?
+* ~spiral~
+  - [ ] make time
+  - [ ] review issues
+  - [ ] figure out why curvecp is so slow
+    - is there any reason to support curvecp still?
+    - superseded? http://cr.yp.to/tcpip/minimalt-20130522.pdf
+    - maybe not? https://twitter.com/hashbreaker/status/337447838361456641
