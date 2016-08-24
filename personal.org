@@ -8,7 +8,7 @@
 | ~aster~                  | serde-rs          | patched (II)          |
 | ~awpa~                   | habnabit          | IARC pending          |
 | ~bees~ (~vuvz~)          | habnabit          | IARC pending          |
-| ~cykeccak~               | habnabit          | untouched (predating  |
+| ~cykeccak~               | habnabit          | untouched (predating) |
 | ~dotfiles~               | habnabit          | IARC pending          |
 | ~ebb-lint~               | habnabit          | untouched (predating) |
 | ~hab-ansible~            | habnabit          | private               |
