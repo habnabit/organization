@@ -1,7 +1,42 @@
 #+TITLE: Personal projects
 #+TODO: TODO(t) INPROGRESS(i) BLOCKED(b) | DONE(d)
 
-* ~passacre~ [0/8]
+* Copyright status
+
+| Project                  | Owner             | Status                |
+|--------------------------+-------------------+-----------------------|
+| ~aster~                  | serde-rs          | patched (II)          |
+| ~awpa~                   | habnabit          | IARC pending          |
+| ~bees~ (~vuvz~)          | habnabit          | IARC pending          |
+| ~cykeccak~               | habnabit          | untouched (predating  |
+| ~dotfiles~               | habnabit          | IARC pending          |
+| ~ebb-lint~               | habnabit          | untouched (predating) |
+| ~hab-ansible~            | habnabit          | private               |
+| ~macemu~ (~SheepShaver~) | habnabit          | untouched (predating) |
+| ~panglery~               | habnabit          | untouched (predating) |
+| ~parsley~                | python-parsley    | untouched (predating) |
+| ~passacre~               | habnabit          | IARC approved         |
+| ~pebble.rs~              | habnabit          | IARC pending          |
+| ~pypy~                   | pypy              | patched (I)           |
+| ~qbuf~                   | habnabit          | untouched (predating) |
+| ~quickcheck~             | BurntSushi        | patched (I)           |
+| ~ramp~                   | Aatch             | patched (II)          |
+| ~rand~                   | rust-lang-nursery | patched (I)           |
+| ~rust~                   | rust-lang         | patched (III)         |
+| ~rust-emscripten~        | habnabit          | IARC pending          |
+| ~rustfmt~                | rust-lang-nursery | patched (I)           |
+| ~rustup.rs~              | rust-lang-nursery | untouched             |
+| ~serde_proto~            | habnabit          | release unscheduled   |
+| ~spiral~                 | habnabit          | untouched (predating) |
+| ~theresa-bot~            | habnabit          | untouched (predating) |
+| ~tokio-xhr~              | habnabit          | IARC pending          |
+| ~txacme~                 | mithrandi         | patched (I)           |
+| ~txsocksx~               | habnabit          | IARC approved         |
+| ~vcversioner~            | habnabit          | IARC approved         |
+| ~wip~                    | habnabit          | IARC approved         |
+
+
+* ~passacre~ [1/8]
 ** TODO ~irmin~ backing database/run in a browser [0/4]
   - https://github.com/kripken/emscripten/blob/master/src/embind/embind.js
   - https://github.com/kripken/emscripten/blob/master/src/embind/emval.js
@@ -17,8 +52,10 @@
   - [ ] separate out patches
     - [ ] patch approval..........
 *** TODO ~emscripten~ support [0/2]
-**** TODO ~tokio-xhr~ [0/3]
-  - [ ] IARC
+**** TODO ~rust-emscripten~ / ~tokio-xhr~ [0/3]
+  - [-] IARC
+    - [X] submitted
+    - [ ] accepted
   - [ ] tests??? (how)
   - [ ] use ~tokio~ services
     - https://github.com/tokio-rs/tokio/blob/master/src/service.rs#L130-L146
@@ -35,10 +72,10 @@
   - [ ] submit PR for installing from local tarballs
     - [ ] tests
     - [ ] submit patch
-** INPROGRESS ~ramp~ [0/1]
-  - [-] use ~num_traits~
+** DONE ~ramp~ [1/1]
+  - [X] use ~num_traits~
     - [X] https://github.com/Aatch/ramp/pull/75
-    - [ ] submit patch
+    - [X] submit patch
 ** TODO fully port to rust
 ** TODO stabilize ~scrypt~
 ** TODO deprecate/remove yubikey
@@ -49,11 +86,22 @@
   - https://hacks.pmf.io/2015/06/24/the-beaglebone-black-as-a-smart-kvm/
 ** TODO ~secbox~?
   - https://github.com/ticki/secbox/blob/master/src/lib.rs
-* ~ebb-lint~ [0/3]
-  - [ ] wait for legal situation to settle down
-  - [ ] make time
-  - [ ] review issues
+* ~ebb-lint~ [0/5]
+** BLOCKED wait for legal situation to settle down
+** TODO make time
+** TODO review issues
+** TODO fix up because of ~flake8~ and ~pycodestyle~ changes
+  - https://github.com/habnabit/ebb-lint/issues/2
   - http://flake8.pycqa.org/en/latest/user/ignoring-errors.html#in-line-ignoring-errors
+** TODO move off of ~lib2to3~, which sucks.
+  - https://github.com/habnabit/ebb-lint/issues/4
+*** ~awpa~ [0/2]
+  - [-] IARC
+    - [X] submitted
+    - [ ] accepted
+  - [ ] make time
+  - https://github.com/google/yapf/blob/729279/yapf/yapflib/pytree_utils.py#L70-L102
+  - https://github.com/bukzor/RefactorLib/blob/master/refactorlib/python/parse.py#L40
 * ~txsocksx~ [0/3]
   - [ ] make time
   - [ ] review issues
@@ -62,7 +110,9 @@
     - might be blocked on other things too
 * ~pebble.rs~ [0/2]
   - [ ] clean it up
-  - [ ] release it? IARC?
+  - [-] IARC
+    - [X] submitted
+    - [ ] accepted
 * FW TAS [0/1]
 ** TODO qemu evaluation [0/1]
   - [ ] clean up/submit PPC MMU patch
@@ -73,10 +123,6 @@
   - https://translatedcode.wordpress.com/2015/07/06/tricks-for-debugging-qemu-savevm-snapshots/
 ** macsbug
   - http://www.smfr.org/computing/archaic/macsbug.html
-* ~awpa~ [0/1]
-  - [ ] make time
-  - https://github.com/google/yapf/blob/729279/yapf/yapflib/pytree_utils.py#L70-L102
-  - https://github.com/bukzor/RefactorLib/blob/master/refactorlib/python/parse.py#L40
 * ~vcversioner~ [0/3]
   - [ ] make time
   - [ ] deprecate in favor of ~versioneer~?
@@ -104,16 +150,19 @@
   - [ ] open/update PR
     - [ ] submit patch
     - [ ] does this still require patching ~hypothesis~
-** TODO dotfiles [0/5]
+** TODO dotfiles [1/5]
+*** TODO IARC
+  - [X] submitted
+  - [ ] accepted
 *** TODO unbreak ~zsh-highlighting~
 *** BLOCKED rust-lang/rust [0/1]
-  - [ ] PR for ~librand~ under freebsd
+  - [-] PR for ~librand~ under freebsd
     - [ ] https://github.com/rust-lang/rust/pull/35884
-    - [ ] submit patch
-*** BLOCKED rust-lang-nursery/rand [0/1]
-  - [ ] patch for freebsd
-    - [ ] https://github.com/rust-lang-nursery/rand/pull/112
-    - [ ] submit patch
+    - [X] submit patch
+*** DONE rust-lang-nursery/rand [1/1]
+  - [X] patch for freebsd
+    - [X] https://github.com/rust-lang-nursery/rand/pull/112
+    - [X] submit patch
 *** TODO ~cdpath~
 *** TODO ~e~ alias (maybe?)
 * ~panglery~
@@ -125,3 +174,9 @@
     - is there any reason to support curvecp still?
     - superseded? http://cr.yp.to/tcpip/minimalt-20130522.pdf
     - maybe not? https://twitter.com/hashbreaker/status/337447838361456641
+* ~bees~
+** TODO IARC
+  - [X] submitted
+  - [ ] accepted
+** TODO web frontend
+  - lookin pretty good
