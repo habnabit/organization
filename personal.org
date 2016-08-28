@@ -72,6 +72,7 @@
   - [ ] submit PR for installing from local tarballs
     - [ ] tests
     - [ ] submit patch
+*** maybe this would all be easier with cordova
 ** DONE ~ramp~ [1/1]
   - [X] use ~num_traits~
     - [X] https://github.com/Aatch/ramp/pull/75
@@ -148,16 +149,17 @@
 *** TODO txacme [0/2]
   - [ ] figure out what I even want
   - [ ] open/update PR
+    - [ ] https://github.com/mithrandi/txacme/pull/27
     - [ ] submit patch
     - [ ] does this still require patching ~hypothesis~
-** TODO dotfiles [1/5]
+** TODO dotfiles [2/6]
 *** TODO IARC
   - [X] submitted
   - [ ] accepted
 *** TODO unbreak ~zsh-highlighting~
-*** BLOCKED rust-lang/rust [0/1]
-  - [-] PR for ~librand~ under freebsd
-    - [ ] https://github.com/rust-lang/rust/pull/35884
+*** DONE rust-lang/rust [1/1]
+  - [X] PR for ~librand~ under freebsd
+    - [X] https://github.com/rust-lang/rust/pull/35884
     - [X] submit patch
 *** DONE rust-lang-nursery/rand [1/1]
   - [X] patch for freebsd
