@@ -52,7 +52,7 @@
   - [-] patches to add methods
     - [X] separate out patches
     - [ ] https://github.com/serde-rs/aster/pull/103
-    - [ ] submit patch
+    - [X] submit patch
 *** TODO ~emscripten~ support [0/2]
 **** TODO ~rust-emscripten~ / ~tokio-xhr~ [0/3]
   - [-] IARC
