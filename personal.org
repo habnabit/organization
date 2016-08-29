@@ -48,9 +48,11 @@
   - [ ] conformance testing
   - [ ] figure out if compilation can take less time
   - [ ] release it
-**** TODO ~aster~ [0/1]
-  - [ ] separate out patches
-    - [ ] patch approval..........
+**** INPROGRESS ~aster~ [0/1]
+  - [-] patches to add methods
+    - [X] separate out patches
+    - [ ] https://github.com/serde-rs/aster/pull/103
+    - [ ] submit patch
 *** TODO ~emscripten~ support [0/2]
 **** TODO ~rust-emscripten~ / ~tokio-xhr~ [0/3]
   - [-] IARC
@@ -167,18 +169,20 @@
     - [X] submit patch
 *** TODO ~cdpath~
 *** TODO ~e~ alias (maybe?)
-* ~panglery~
+* ~panglery~ [0/1]
 ** TODO does anyone even use this? can I kill it?
-* ~spiral~
+* ~spiral~ [0/3]
   - [ ] make time
   - [ ] review issues
   - [ ] figure out why curvecp is so slow
     - is there any reason to support curvecp still?
     - superseded? http://cr.yp.to/tcpip/minimalt-20130522.pdf
     - maybe not? https://twitter.com/hashbreaker/status/337447838361456641
-* ~bees~
+* ~bees~ [1/3]
 ** TODO IARC
   - [X] submitted
   - [ ] accepted
-** TODO web frontend
+** DONE web frontend
   - lookin pretty good
+** BLOCKED figure out better methods for positioning
+  - hoping that iBeacon will work
