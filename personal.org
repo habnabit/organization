@@ -136,7 +136,7 @@
   - [ ] python 3 bytes?
 * ~wip~ [0/1]
   - [ ] make time
-* box configuration [0/4]
+* box configuration [0/5]
 ** TODO ifstated for comcast DHCP
   - https://calomel.org/ifstated.html
   - might not be necessary with the new modem
@@ -186,3 +186,21 @@
   - lookin pretty good
 ** BLOCKED figure out better methods for positioning
   - hoping that iBeacon will work
+* blog [0/1]
+** TODO python packages redux
+  - thinking FAQ style is best
+    - why can't I run a module inside a package
+      - what's the alternative
+        - careful, because this does cross into /packaging/
+    - what goes in ~__init__.py~
+    - what's a namespace package and why does it suck
+    - what's a circular import and how can i avoid it
+    - why do reordering imports or avoiding ~from .. import ..~ fix circular imports
+  - indicate the old guide is superseded
+  - including examples of error messages is important
+  - github repo of correct/incorrect examples?
+    - linking "real" code doesn't help and can be confusing
+    - probably best to use something slightly more real than spam/eggs/foo/bar
+  - /packages/, not /packaging/
+    - a packaging guide should be separate
+    - ~src~ vs. not is stylistic and doesn't matter for any examples given
