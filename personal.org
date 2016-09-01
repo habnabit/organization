@@ -1,5 +1,6 @@
 #+TITLE: Personal projects
-#+TODO: TODO(t) INPROGRESS(i) BLOCKED(b) | DONE(d)
+#+TODO: TODO(t) INPROGRESS(i) BLOCKED(b) | DONE(d) OBSOLETE(o)
+#+OPTIONS: H:1 tasks:todo
 
 * Copyright status
 
@@ -65,10 +66,9 @@
     - [ ] accepted
   - [ ] tests??? (how)
   - [ ] use ~tokio~ services
-    - https://github.com/tokio-rs/tokio/blob/master/src/service.rs#L130-L146
     - figure out how to interoperate with other http services
     - use the split-out ~hyper~?
-    - waiting on ~tokio~ to split out services into its own crate
+    - https://github.com/tokio-rs/tokio-service
 **** BLOCKED ~hyper~ [0/1]
   - [ ] split hyper into multiple crates
     - that is, if they approve
@@ -141,10 +141,11 @@
   - [ ] python 3 bytes?
 * ~wip~ [0/1]
   - [ ] make time
-* box configuration [0/5]
-** TODO ifstated for comcast DHCP
+* box configuration [1/5]
+** OBSOLETE ifstated for comcast DHCP
   - https://calomel.org/ifstated.html
   - might not be necessary with the new modem
+  - it wasn't necessary; the new modem is stable
 ** TODO move everything to freebsd
 ** TODO stop hand-rolling my own CA
   - [ ] see if ~vault~ is actually usable for this
@@ -189,8 +190,9 @@
   - [ ] accepted
 ** DONE web frontend
   - lookin pretty good
-** BLOCKED figure out better methods for positioning
+** INPROGRESS figure out better methods for positioning
   - hoping that iBeacon will work
+  - iBeacon works! but now what do I do with these RSSI values
 * blog [0/2]
 ** BLOCKED IARC
   - I can't believe I had to IARC this
