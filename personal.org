@@ -7,32 +7,32 @@
 | Project                  | Owner             | Status                |
 |--------------------------+-------------------+-----------------------|
 | ~aster~                  | serde-rs          | patched (III)         |
-| ~awpa~                   | habnabit          | IARC pending          |
-| ~bees~ (~vuvz~)          | habnabit          | IARC pending          |
-| ~blog.habnab.it~         | habnabit          | IARC pending          |
+| ~awpa~                   | habnabit          | IARC approved         |
+| ~bees~ (~vuvz~)          | habnabit          | IARC approved         |
+| ~blog.habnab.it~         | habnabit          | IARC approved         |
 | ~cykeccak~               | habnabit          | untouched (predating) |
-| ~dotfiles~               | habnabit          | IARC pending          |
+| ~dotfiles~               | habnabit          | IARC approved         |
 | ~ebb-lint~               | habnabit          | untouched (predating) |
 | ~hab-ansible~            | habnabit          | private               |
 | ~macemu~ (~SheepShaver~) | habnabit          | untouched (predating) |
 | ~panglery~               | habnabit          | untouched (predating) |
 | ~parsley~                | python-parsley    | untouched (predating) |
 | ~passacre~               | habnabit          | IARC approved         |
-| ~pebble.rs~              | habnabit          | IARC pending          |
+| ~pebble.rs~              | habnabit          | IARC approved         |
 | ~pypy~                   | pypy              | patched (I)           |
 | ~qbuf~                   | habnabit          | untouched (predating) |
 | ~quickcheck~             | BurntSushi        | patched (I)           |
 | ~ramp~                   | Aatch             | patched (II)          |
 | ~rand~                   | rust-lang-nursery | patched (I)           |
 | ~rust~                   | rust-lang         | patched (III)         |
-| ~rust-emscripten~        | habnabit          | IARC pending          |
-| ~rust-fnconcat~          | habnabit          | IARC pending          |
+| ~rust-emscripten~        | habnabit          | IARC approved         |
+| ~rust-fnconcat~          | habnabit          | IARC approved         |
 | ~rustfmt~                | rust-lang-nursery | patched (I)           |
 | ~rustup.rs~              | rust-lang-nursery | untouched             |
 | ~serde_proto~            | habnabit          | release unscheduled   |
 | ~spiral~                 | habnabit          | untouched (predating) |
 | ~theresa-bot~            | habnabit          | untouched (predating) |
-| ~tokio-xhr~              | habnabit          | IARC pending          |
+| ~tokio-xhr~              | habnabit          | IARC approved         |
 | ~txacme~                 | mithrandi         | patched (I)           |
 | ~txsocksx~               | habnabit          | IARC approved         |
 | ~vcversioner~            | habnabit          | IARC approved         |
@@ -60,10 +60,10 @@
     - [X] https://github.com/serde-rs/aster/pull/103
     - [X] submit patch
 *** TODO ~emscripten~ support [0/2]
-**** TODO ~rust-emscripten~ / ~tokio-xhr~ [0/3]
-  - [-] IARC
+**** TODO ~rust-emscripten~ / ~tokio-xhr~ [1/3]
+  - [X] IARC
     - [X] submitted
-    - [ ] accepted
+    - [X] accepted
   - [ ] tests??? (how)
   - [ ] use ~tokio~ services
     - figure out how to interoperate with other http services
@@ -107,10 +107,10 @@
   - http://flake8.pycqa.org/en/latest/user/ignoring-errors.html#in-line-ignoring-errors
 ** TODO move off of ~lib2to3~, which sucks.
   - https://github.com/habnabit/ebb-lint/issues/4
-*** ~awpa~ [0/2]
-  - [-] IARC
+*** ~awpa~ [1/2]
+  - [X] IARC
     - [X] submitted
-    - [ ] accepted
+    - [X] accepted
   - [ ] make time
   - https://github.com/google/yapf/blob/729279/yapf/yapflib/pytree_utils.py#L70-L102
   - https://github.com/bukzor/RefactorLib/blob/master/refactorlib/python/parse.py#L40
@@ -120,11 +120,11 @@
   - [ ] python 3 support?
     - definitely blocked on ~parsley~
     - might be blocked on other things too
-* ~pebble.rs~ [0/2]
+* ~pebble.rs~ [1/2]
   - [ ] clean it up
-  - [-] IARC
+  - [X] IARC
     - [X] submitted
-    - [ ] accepted
+    - [X] accepted
 * FW TAS [0/1]
 ** TODO qemu evaluation [0/1]
   - [ ] clean up/submit PPC MMU patch
@@ -164,10 +164,10 @@
     - [ ] https://github.com/mithrandi/txacme/pull/27
     - [ ] submit patch
     - [ ] does this still require patching ~hypothesis~
-** TODO dotfiles [2/6]
-*** BLOCKED IARC
+** TODO dotfiles [3/6]
+*** DONE IARC
   - [X] submitted
-  - [ ] accepted
+  - [X] accepted
 *** TODO unbreak ~zsh-highlighting~
 *** DONE rust-lang/rust [1/1]
   - [X] PR for ~librand~ under freebsd
@@ -188,10 +188,10 @@
     - is there any reason to support curvecp still?
     - superseded? http://cr.yp.to/tcpip/minimalt-20130522.pdf
     - maybe not? https://twitter.com/hashbreaker/status/337447838361456641
-* ~bees~ [1/3]
-** BLOCKED IARC
+* ~bees~ [2/5]
+** DONE IARC
   - [X] submitted
-  - [ ] accepted
+  - [X] accepted
 ** DONE web frontend
   - lookin pretty good
 ** INPROGRESS figure out better methods for positioning
@@ -200,8 +200,8 @@
 ** TODO food snooze
 ** TODO remote shutdown
   - need to make sure supercollider exits
-* blog [0/2]
-** BLOCKED IARC
+* blog [1/2]
+** DONE IARC
   - I can't believe I had to IARC this
 ** TODO python packages redux
   - thinking FAQ style is best
@@ -230,8 +230,8 @@
   - /packages/, not /packaging/
     - a packaging guide should be separate
     - ~src~ vs. not is stylistic and doesn't matter for any examples given
-* ~rust-fnconcat~ [0/3]
-** BLOCKED IARC
+* ~rust-fnconcat~ [1/3]
+** DONE IARC
 ** TODO write docs
 ** TODO evaluate if a quasiquoting thing or aster would be a better fit
 * ~OCTCL~
