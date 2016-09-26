@@ -94,6 +94,10 @@
   - https://hacks.pmf.io/2015/06/24/the-beaglebone-black-as-a-smart-kvm/
 ** TODO ~secbox~?
   - https://github.com/ticki/secbox/blob/master/src/lib.rs
+** TODO factor out ~catch_panic~ vs. ~catch_unwind~ differences
+  - there's less boilerplate required now
+** TODO add a library context struct to the C ABI
+  - can put the allocator function and last error into it
 * ~ebb-lint~ [0/5]
 ** BLOCKED wait for legal situation to settle down
 ** TODO make time
@@ -193,6 +197,9 @@
 ** INPROGRESS figure out better methods for positioning
   - hoping that iBeacon will work
   - iBeacon works! but now what do I do with these RSSI values
+** TODO food snooze
+** TODO remote shutdown
+  - need to make sure supercollider exits
 * blog [0/2]
 ** BLOCKED IARC
   - I can't believe I had to IARC this
@@ -204,6 +211,8 @@
       - what if I cd into the package
 	- cwd does not affect imports
     - what goes in ~__init__.py~
+    - what is ~__main__.py~ and what goes in it
+      - nothing but import+call
     - what's a namespace package and why does it suck
     - what's a circular import and how can i avoid it
     - why do reordering imports or avoiding ~from .. import ..~ fix circular imports
@@ -225,3 +234,13 @@
 ** BLOCKED IARC
 ** TODO write docs
 ** TODO evaluate if a quasiquoting thing or aster would be a better fit
+* ~OCTCL~
+** TODO modernization
+*** TODO port to gradle
+*** TODO complete 8.4 → 8.5 migration
+**** TODO ~TclDict~
+*** TODO complete 8.5 → 8.6 migration
+  - what the heck even goes into this?
+  - look into auto-parking i guess
+** TODO make some OS
+  - involves using ~[interp ...]~ for sandboxing the java stuff out, probably
