@@ -230,6 +230,13 @@
   - /packages/, not /packaging/
     - a packaging guide should be separate
     - ~src~ vs. not is stylistic and doesn't matter for any examples given
+** TODO don't activate virtualenvs
+  - man I repeat this a lot
+  - it does nothing useful
+    - the magic is in the binaries, not ~activate~
+  - it obscures which binary you're running
+  - having the virtualenv in the prompt doesn't tell you what's installed in it
+  - virtualenvwrapper makes the whole mess worse
 * ~rust-fnconcat~ [1/3]
 ** DONE IARC
 ** TODO write docs
