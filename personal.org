@@ -39,7 +39,7 @@
 | ~wip~                    | habnabit          | IARC approved         |
 
 
-* ~passacre~ [1/8]
+* ~passacre~ [1/10]
 ** TODO ~irmin~ backing database/run in a browser [0/4]
   - https://github.com/kripken/emscripten/blob/master/src/embind/embind.js
   - https://github.com/kripken/emscripten/blob/master/src/embind/emval.js
@@ -188,7 +188,7 @@
     - is there any reason to support curvecp still?
     - superseded? http://cr.yp.to/tcpip/minimalt-20130522.pdf
     - maybe not? https://twitter.com/hashbreaker/status/337447838361456641
-* ~bees~ [2/5]
+* ~bees~ [4/6]
 ** DONE IARC
   - [X] submitted
   - [X] accepted
@@ -197,10 +197,12 @@
 ** INPROGRESS figure out better methods for positioning
   - hoping that iBeacon will work
   - iBeacon works! but now what do I do with these RSSI values
-** TODO food snooze
-** TODO remote shutdown
+** DONE food snooze
+** DONE remote shutdown
   - need to make sure supercollider exits
-* blog [1/2]
+  - it exits, but not reliably
+** TODO make supercollider exit more reliable
+* blog [1/3]
 ** DONE IARC
   - I can't believe I had to IARC this
 ** TODO python packages redux
@@ -235,6 +237,7 @@
   - it does nothing useful
     - the magic is in the binaries, not ~activate~
   - it obscures which binary you're running
+    - ~pip2.7~: does that run in the virtualenv or not? impossible to know
   - having the virtualenv in the prompt doesn't tell you what's installed in it
   - virtualenvwrapper makes the whole mess worse
 * ~rust-fnconcat~ [1/3]
@@ -242,12 +245,22 @@
 ** TODO write docs
 ** TODO evaluate if a quasiquoting thing or aster would be a better fit
 * ~OCTCL~
-** TODO modernization
-*** TODO port to gradle
-*** TODO complete 8.4 → 8.5 migration
-**** TODO ~TclDict~
-*** TODO complete 8.5 → 8.6 migration
-  - what the heck even goes into this?
-  - look into auto-parking i guess
-** TODO make some OS
+** TODO tcljava fixes/modernization
+*** DONE port to gradle
+  - as done as is necessary for now. might need fixups, but seems stable.
+*** INPROGRESS complete 8.4 → 8.5 migration
+**** INPROGRESS ~TclDict~
+*** INPROGRESS complete 8.5 → 8.6 migration
+  - expose/use NRE functions
+*** DONE handle extant unpacked tcl libraries
+*** TODO unbundle unused libraries
+*** TODO be crossplatform
+** INPROGRESS make some OS
   - involves using ~[interp ...]~ for sandboxing the java stuff out, probably
+  - maybe not; one ~Interp~ and many ~interp create~ is difficult to implement.
+    - don't want them blocking each other.
+    - also harder to eval in the right ~interp~ (?)
+* ~OClog~
+** TODO find a usable prolog :(
+* screensaver
+** TODO add a clock
