@@ -14,6 +14,7 @@
 | ~dotfiles~               | habnabit          | IARC approved         |
 | ~ebb-lint~               | habnabit          | patched (unsubmitted) |
 | ~hab-ansible~            | habnabit          | private               |
+| ~irclick~                | habnabit          | IARC pending          |
 | ~macemu~ (~SheepShaver~) | habnabit          | untouched (predating) |
 | ~OClog~                  | habnabit          | private               |
 | ~OCTCL~                  | habnabit          | private               |
@@ -37,6 +38,7 @@
 | ~tcljava~                | habnabit          | private               |
 | ~theresa-bot~            | habnabit          | untouched (predating) |
 | ~tokio-xhr~              | habnabit          | IARC approved         |
+| ~twircd~                 | habnabit          | IARC pending          |
 | ~txacme~                 | mithrandi         | patched (I)           |
 | ~txsocksx~               | habnabit          | IARC approved         |
 | ~vcversioner~            | habnabit          | IARC approved         |
@@ -276,3 +278,18 @@
 ** TODO IARC
 ** DONE add a clock
 ** TODO add in ~chemicalburn~
+* ~twircd~ [0/5]
+** INPROGRESS IARC
+  - [X] submitted
+  - [ ] accepted
+** INPROGRESS ~irclick~ for parsing command lines [0/4]
+*** INPROGRESS IARC
+  - [X] submitted
+  - [ ] accepted
+*** TODO README/docs
+*** TODO finish test coverage
+*** TODO blog about it?
+** TODO tests :(
+  - wish I hadn't put this off
+** TODO README/docs
+** TODO investigate why tweets sometimes don't show up
