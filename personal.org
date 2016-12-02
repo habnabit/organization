@@ -217,6 +217,7 @@
 ** DONE IARC
   - I can't believe I had to IARC this
 ** TODO python packages redux
+  - prior art: https://gist.github.com/datagrok/2199506
   - thinking FAQ style is best
     - why can't I run a module inside a package
       - what's the alternative
