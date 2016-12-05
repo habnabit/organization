@@ -116,15 +116,16 @@
 ** TODO sort out blanket vs. specific ~noqa~ in ~flake8~
 * ~awpa~ [2/5]
 ** DONE IARC
- - [X] submitted
- - [X] accepted
+  - [X] submitted
+  - [X] accepted
 ** DONE make time
 ** TODO write docs
 ** TODO write real tests
- - also bring back the tests it did have, however bad they might've been
+  - also bring back the tests it did have, however bad they might've been
 ** TODO suggest other libraries use it too
- - https://github.com/google/yapf/blob/729279/yapf/yapflib/pytree_utils.py#L70-L102
- - https://github.com/bukzor/RefactorLib/blob/master/refactorlib/python/parse.py#L40
+  - https://github.com/davidhalter/jedi/issues/630
+  - https://github.com/google/yapf/blob/729279/yapf/yapflib/pytree_utils.py#L70-L102
+  - https://github.com/bukzor/RefactorLib/blob/master/refactorlib/python/parse.py#L40
 * ~txsocksx~ [0/3]
   - [ ] make time
   - [ ] review issues
