@@ -104,7 +104,7 @@
   - there's less boilerplate required now
 ** TODO add a library context struct to the C ABI
   - can put the allocator function and last error into it
-* ~ebb-lint~ [4/6]
+* ~ebb-lint~ [4/7]
 ** DONE wait for legal situation to settle down
 ** DONE make time
 ** DONE review issues
@@ -114,6 +114,9 @@
 ** DONE move off of ~lib2to3~, which sucks.
   - https://github.com/habnabit/ebb-lint/issues/4
 ** TODO sort out blanket vs. specific ~noqa~ in ~flake8~
+  - https://github.com/habnabit/ebb-lint/issues/7
+** BLOCKED wait on coverage to fix unicode (again)
+  - https://bitbucket.org/ned/coveragepy/commits/7c05ee04feb3af5bc8d74ca73b65923bf25c04dc
 * ~awpa~ [2/5]
 ** DONE IARC
   - [X] submitted
@@ -155,8 +158,23 @@
 * ~parsley~ [0/2]
   - [ ] make time
   - [ ] python 3 bytes?
-* ~wip~ [0/1]
-  - [ ] make time
+* ~wip~ [1/4]
+** DONE make time
+** INPROGRESS functional testing
+*** TODO find/make WSGI conformance tests
+  - ~paste.lint~ is necessary but insufficient
+*** INPROGRESS fix ~requests_unixsocket~, which hella leaks FDs
+  - [ ] https://github.com/msabramo/requests-unixsocket/pull/26
+  - [ ] submit patch
+** TODO docs
+*** TODO sketch the full stack?
+** TODO ~qbuf~ [0/3]
+*** TODO decruft
+  - [ ] CI
+  - [ ] RTD
+*** TODO polish/release pure-python implementation
+  - maybe also ditch the C extension?
+*** TODO use it in ~wip~
 * box configuration [1/5]
 ** OBSOLETE ifstated for comcast DHCP
   - https://calomel.org/ifstated.html
