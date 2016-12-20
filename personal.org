@@ -14,7 +14,7 @@
 | ~dotfiles~               | habnabit          | IARC approved         |
 | ~ebb-lint~               | habnabit          | patched (unsubmitted) |
 | ~hab-ansible~            | habnabit          | private               |
-| ~irclick~                | habnabit          | IARC pending          |
+| ~irclick~                | habnabit          | IARC approved         |
 | ~macemu~ (~SheepShaver~) | habnabit          | untouched (predating) |
 | ~OClog~                  | habnabit          | private               |
 | ~OCTCL~                  | habnabit          | private               |
@@ -38,33 +38,21 @@
 | ~tcljava~                | habnabit          | private               |
 | ~theresa-bot~            | habnabit          | untouched (predating) |
 | ~tokio-xhr~              | habnabit          | IARC approved         |
-| ~twircd~                 | habnabit          | IARC pending          |
+| ~twircd~                 | habnabit          | IARC approved         |
 | ~txacme~                 | mithrandi         | patched (I)           |
 | ~txsocksx~               | habnabit          | IARC approved         |
 | ~vcversioner~            | habnabit          | IARC approved         |
 | ~wip~                    | habnabit          | IARC approved         |
 
 
-* ~passacre~ [1/10]
-** TODO ~irmin~ backing database/run in a browser [0/4]
+* ~passacre~ [3/16]
+** TODO ~irmin~ backing database/run in a browser [1/4]
   - https://github.com/kripken/emscripten/blob/master/src/embind/embind.js
   - https://github.com/kripken/emscripten/blob/master/src/embind/emval.js
   - https://github.com/mirage/irmin/wiki/REST-API
   - http://mirage.github.io/irmin/Irmin.html#basics
-*** TODO ~serde_proto~ [1/4]
-**** TODO figure out releasing
-  - [ ] sort out requirements
-  - [ ] release it
-**** TODO finish initial implementation
-  - [ ] keep moving more things to quasiquote macros
-  - [ ] conformance testing
-  - [ ] unit testing
-**** TODO figure out if compilation can take less time
-**** DONE ~aster~ [1/1]
-  - [X] patches to add methods
-    - [X] separate out patches
-    - [X] https://github.com/serde-rs/aster/pull/103
-    - [X] submit patch
+*** OBSOLETE ~serde_proto~
+  - switching to capnproto instead.
 *** TODO ~emscripten~ support [0/2]
 **** TODO ~rust-emscripten~ / ~tokio-xhr~ [1/3]
   - [X] IARC
@@ -98,12 +86,58 @@
   - add profiles per domain?
 ** TODO dedicated hardware
   - https://hacks.pmf.io/2015/06/24/the-beaglebone-black-as-a-smart-kvm/
+  - probably will work nicely with the RPC
 ** TODO ~secbox~?
   - https://github.com/ticki/secbox/blob/master/src/lib.rs
-** TODO factor out ~catch_panic~ vs. ~catch_unwind~ differences
+** OBSOLETE factor out ~catch_panic~ vs. ~catch_unwind~ differences
   - there's less boilerplate required now
-** TODO add a library context struct to the C ABI
+** OBSOLETE add a library context struct to the C ABI
   - can put the allocator function and last error into it
+  - it's pretty nice to not have a C ABI
+** INPROGRESS ~capnproto~ serialization/RPC
+** BLOCKED build/distribute a ~manylinux1~ wheel and ~pex~
+  - can't decide if I should do this for the not-rust branch or wait for rust
+  - rust means more build tooling, so using rust is p much going to require pex
+    - it's sad that one can't rely on rust tooling present
+    - okay this is mostly sorted out by using docker I think
+  - yes bundle up the rust backend
+  - pex doesn't quite have the required support yet
+    - https://github.com/pantsbuild/pex/pull/201
+    - https://github.com/pantsbuild/pex/pull/316
+*** INPROGRESS automate building all three wheels [0/4]
+  - includes fixing up setup.py metadata and README
+  - [ ] ~passacre~
+  - [ ] ~passacre-nobackend~
+  - [ ] ~passacre-backend~
+  - [ ] build everything with one command
+** TODO port to ~click~
+  - or ditch python for rust entirely?
+  - unlikely in the short term.
+** TODO use more capabilities in the rust backend
+  - http://capsicum-linux.org/ the general idea
+  - https://github.com/servo/gaol the implementation to use, perhaps
+** TODO automate checking capnp schema backward compatibility
+  - apparently this doesn't exist
+  - should be easy to make
+** TODO figure out how to do schema updates
+  - oops, I never planned how to update the schema
+  - even if long-term the plan is capnp in irmin, somehow, that is a long way out
+  - capnp in sqlite?
+    - it's at least possible to turn capnp into json
+* ~serde_proto~ [1/4]
+** TODO figure out releasing
+  - [ ] sort out requirements
+  - [ ] release it
+** TODO finish initial implementation
+  - [ ] keep moving more things to quasiquote macros
+  - [ ] conformance testing
+  - [ ] unit testing
+** TODO figure out if compilation can take less time
+** DONE ~aster~ [1/1]
+  - [X] patches to add methods
+    - [X] separate out patches
+    - [X] https://github.com/serde-rs/aster/pull/103
+    - [X] submit patch
 * ~ebb-lint~ [4/7]
 ** DONE wait for legal situation to settle down
 ** DONE make time
@@ -298,14 +332,14 @@
 ** TODO IARC
 ** DONE add a clock
 ** TODO add in ~chemicalburn~
-* ~twircd~ [0/5]
-** INPROGRESS IARC
+* ~twircd~ [1/5]
+** DONE IARC
   - [X] submitted
-  - [ ] accepted
-** INPROGRESS ~irclick~ for parsing command lines [0/4]
-*** INPROGRESS IARC
+  - [X] accepted
+** INPROGRESS ~irclick~ for parsing command lines [1/4]
+*** DONE IARC
   - [X] submitted
-  - [ ] accepted
+  - [X] accepted
 *** TODO README/docs
 *** TODO finish test coverage
 *** TODO blog about it?
