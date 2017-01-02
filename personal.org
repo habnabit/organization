@@ -45,7 +45,7 @@
 | ~wip~                    | habnabit          | IARC approved         |
 
 
-* ~passacre~ [3/16]
+* ~passacre~ [5/18]
 ** TODO ~irmin~ backing database/run in a browser [1/4]
   - https://github.com/kripken/emscripten/blob/master/src/embind/embind.js
   - https://github.com/kripken/emscripten/blob/master/src/embind/emval.js
@@ -94,22 +94,23 @@
 ** OBSOLETE add a library context struct to the C ABI
   - can put the allocator function and last error into it
   - it's pretty nice to not have a C ABI
-** INPROGRESS ~capnproto~ serialization/RPC
-** BLOCKED build/distribute a ~manylinux1~ wheel and ~pex~
+** DONE ~capnproto~ RPC
+** DONE build/distribute a ~manylinux1~ wheel
   - can't decide if I should do this for the not-rust branch or wait for rust
   - rust means more build tooling, so using rust is p much going to require pex
     - it's sad that one can't rely on rust tooling present
     - okay this is mostly sorted out by using docker I think
   - yes bundle up the rust backend
+*** DONE automate building all three wheels [4/4]
+  - includes fixing up setup.py metadata and README
+  - [X] ~passacre~
+  - [X] ~passacre-nobackend~
+  - [X] ~passacre-backend~
+  - [X] build everything with one command
+** BLOCKED distribute a ~pex~
   - pex doesn't quite have the required support yet
     - https://github.com/pantsbuild/pex/pull/201
     - https://github.com/pantsbuild/pex/pull/316
-*** INPROGRESS automate building all three wheels [0/4]
-  - includes fixing up setup.py metadata and README
-  - [ ] ~passacre~
-  - [ ] ~passacre-nobackend~
-  - [ ] ~passacre-backend~
-  - [ ] build everything with one command
 ** TODO port to ~click~
   - or ditch python for rust entirely?
   - unlikely in the short term.
@@ -119,11 +120,14 @@
 ** TODO automate checking capnp schema backward compatibility
   - apparently this doesn't exist
   - should be easy to make
-** TODO figure out how to do schema updates
+  - this isn't actually necessary in the IPC case (yet) because the client and server are updated in lockstep
+** TODO figure out how to do passacre schema updates
   - oops, I never planned how to update the schema
   - even if long-term the plan is capnp in irmin, somehow, that is a long way out
   - capnp in sqlite?
     - it's at least possible to turn capnp into json
+** INPROGRESS figure out wordlist attribution/license
+  - what a mess
 * ~serde_proto~ [1/4]
 ** TODO figure out releasing
   - [ ] sort out requirements
@@ -266,7 +270,7 @@
   - need to make sure supercollider exits
   - it exits, but not reliably
 ** TODO make supercollider exit more reliable
-* blog [1/3]
+* blog [1/4]
 ** DONE IARC
   - I can't believe I had to IARC this
 ** TODO python packages redux
@@ -305,6 +309,7 @@
     - ~pip2.7~: does that run in the virtualenv or not? impossible to know
   - having the virtualenv in the prompt doesn't tell you what's installed in it
   - virtualenvwrapper makes the whole mess worse
+** TODO ~run_until_complete~ considered harmful
 * ~rust-fnconcat~ [1/3]
 ** DONE IARC
 ** TODO write docs
