@@ -54,19 +54,7 @@
 *** OBSOLETE ~serde_proto~
   - switching to capnproto instead.
 *** TODO ~emscripten~ support [0/2]
-**** TODO ~rust-emscripten~ / ~tokio-xhr~ [1/3]
-  - [X] IARC
-    - [X] submitted
-    - [X] accepted
-  - [ ] tests??? (how)
-  - [ ] use ~tokio~ services
-    - figure out how to interoperate with other http services
-    - use the split-out ~hyper~?
-    - https://github.com/tokio-rs/tokio-service
-**** BLOCKED ~hyper~ [0/1]
-  - [ ] split hyper into multiple crates
-    - that is, if they approve
-    - https://github.com/hyperium/hyper/issues/894
+  - see: ~rust-emscripten~ / ~tokio-xhr~
 *** TODO figure out if you can easily read/write to github from mobile
 *** TODO get rust stable running on ~emscripten~
 **** TODO ~rustup.rs~
@@ -111,6 +99,8 @@
   - pex doesn't quite have the required support yet
     - https://github.com/pantsbuild/pex/pull/201
     - https://github.com/pantsbuild/pex/pull/316
+  - pycapnp is ready now, but tricky:
+    - https://github.com/sandstorm-io/capnproto/issues/350
 ** TODO port to ~click~
   - or ditch python for rust entirely?
   - unlikely in the short term.
@@ -128,6 +118,8 @@
     - it's at least possible to turn capnp into json
 ** INPROGRESS figure out wordlist attribution/license
   - what a mess
+** TODO evaluate configuration error reporting
+  - http://opera.ucsd.edu/paper/csur15-survey.pdf
 * ~serde_proto~ [1/4]
 ** TODO figure out releasing
   - [ ] sort out requirements
@@ -246,7 +238,14 @@
     - [X] https://github.com/rust-lang-nursery/rand/pull/112
     - [X] submit patch
 *** TODO ~cdpath~
+  - https://robots.thoughtbot.com/cding-to-frequently-used-directories-in-zsh
 *** TODO ~e~ alias (maybe?)
+*** TODO ~zsh-autosuggestions~
+  - https://github.com/zsh-users/zsh-autosuggestions
+** TODO ~irssi~ config editor [/]
+  - https://github.com/irssi/irssi/tree/master/src/lib-config
+*** TODO evaluate fixing ~toml-rs~ or similar for round-tripping comments/formatting
+  - https://github.com/alexcrichton/toml-rs/blob/master/src/lib.rs
 * ~panglery~ [0/1]
 ** TODO does anyone even use this? can I kill it?
 * ~spiral~ [0/3]
@@ -352,3 +351,20 @@
   - wish I hadn't put this off
 ** TODO README/docs
 ** TODO investigate why tweets sometimes don't show up
+* TODO ~rust-emscripten~ / ~tokio-xhr~ [1/3]
+** DONE IARC
+  - [X] submitted
+  - [X] accepted
+** TODO tests??? (how)
+** TODO use ~tokio~ services
+  - figure out how to interoperate with other http services
+  - use the split-out ~hyper~?
+  - https://github.com/tokio-rs/tokio-service
+** BLOCKED ~hyper~ [0/1]
+  - [ ] split hyper into multiple crates
+    - that is, if they approve
+    - https://github.com/hyperium/hyper/issues/894
+** TODO fix the wire type representation
+  - turns out it's actually a wonky union
+  - https://github.com/kripken/emscripten/blob/master/system/include/emscripten/val.h#L169
+  - https://github.com/rust-lang/rfcs/blob/master/text/1444-union.md
